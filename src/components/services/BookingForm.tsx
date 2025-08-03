@@ -783,7 +783,11 @@ const BookingForm = ({
                 </label>
                 <div className="flex gap-4 overflow-x-auto pb-3 px-1 md:flex-wrap md:overflow-x-visible md:px-0">
                   {[2, 3, 4, 5, 6].map((hour) => {
-                    const price = hour <= 3 ? 35 : 33;
+                    // const price = hour <= 3 ? 35 : 33;
+                    let price;
+                    if (hour === 2) price = 39;
+                    else if (hour === 3) price = 35;
+                    else price = 33;
                     return (
                       <div key={hour} className="flex flex-col items-center flex-shrink-0">
                         <button
