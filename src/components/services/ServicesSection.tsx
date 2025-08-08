@@ -12,6 +12,7 @@ import ServiceCard from "./ServiceCard";
 import AddressPromptDialog from "../home/AddressPromptDialog";
 import CategoriesSlider from "./CategoriesSlider";
 import { useSearchParams } from "next/navigation";
+import Loader from "../ui/Loader";
 
 const ServicesSection = () => {
   const { services, emirates } = useServices();
@@ -299,7 +300,7 @@ const ServicesSection = () => {
 
       {/* Results count */}
       <div className="flex justify-between items-center mb-5 mt-2">
-        {filteredServices.length === 0
+        {/* {filteredServices.length === 0
           ?
           <div className="mx-auto text-center max-w-md bg-yellow-100 border border-yellow-300 text-yellow-800 px-4 py-3 rounded-xl shadow-sm">
             <p className="font-semibold text-lg">{t("no_services_found")}</p>
@@ -309,7 +310,7 @@ const ServicesSection = () => {
           <p className="text-interactive_color  bg-green-300/60 p-2 rounded-xl">
             {`${t("showing")} ${filteredServices.length} ${filteredServices.length === 1 ? t("service") : t("services")}`}
           </p>
-        }
+        } */}
         {/* View toggle (visible on desktop only) */}
         <div className="hidden md:flex gap-2 ml-3">
           <button
@@ -365,38 +366,39 @@ const ServicesSection = () => {
       <div className=" ">
         {/* No results message */}
         {filteredServices.length === 0 && (
-          <div
-            className={`text-center py-16 bg-gray-50 rounded-xl `}
-          >
-            <div className="mx-auto h-24 w-24 text-gray-300 mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
-              {t("no_services_found")}
-            </h3>
-            <p className="text-gray-500 max-w-md mx-auto">
-              {t("adjust_search")}
-            </p>
-            <button
-              onClick={clearFilters}
-              className="mt-4 px-4 py-2 bg-interactive_color text-white rounded-lg hover:bg-opacity-90 transition-colors"
-              aria-label={t("clear_filters")}
-            >
-              {t("clear_filters")}
-            </button>
-          </div>
+          // <div
+          //   className={`text-center py-16 bg-gray-50 rounded-xl `}
+          // >
+          //   <div className="mx-auto h-24 w-24 text-gray-300 mb-4">
+          //     <svg
+          //       xmlns="http://www.w3.org/2000/svg"
+          //       fill="none"
+          //       viewBox="0 0 24 24"
+          //       stroke="currentColor"
+          //     >
+          //       <path
+          //         strokeLinecap="round"
+          //         strokeLinejoin="round"
+          //         strokeWidth={1}
+          //         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          //       />
+          //     </svg>
+          //   </div>
+          //   <h3 className="text-lg font-medium text-gray-900 mb-2">
+          //     {t("no_services_found")}
+          //   </h3>
+          //   <p className="text-gray-500 max-w-md mx-auto">
+          //     {t("adjust_search")}
+          //   </p>
+          //   <button
+          //     onClick={clearFilters}
+          //     className="mt-4 px-4 py-2 bg-interactive_color text-white rounded-lg hover:bg-opacity-90 transition-colors"
+          //     aria-label={t("clear_filters")}
+          //   >
+          //     {t("clear_filters")}
+          //   </button>
+          // </div>
+          <Loader/>
         )}
 
         {/* Services Grid */}

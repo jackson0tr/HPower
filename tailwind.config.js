@@ -34,6 +34,7 @@ module.exports = {
         text_white: "#FFFFFF",
         active_color: "#FF7C44",
         interactive_color: "#4D002e",
+        secondary_bg: "#f7e6dd"
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',

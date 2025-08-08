@@ -115,9 +115,13 @@ const ContactForm = ({ fromHome }) => {
             <div className="flex flex-col md:flex-row gap-8">
               {/* Form Side */}
               <div className="w-full md:w-1/2">
-                <h2 className="text-mobile_header lg:text-header text-interactive_color mb-8">
+                <h2 className="text-mobile_header lg:text-header text-interactive_color mb-3">
                   {t("title")}
                 </h2>
+
+                <p className="md:text-mobile_header text-xs  text-interactive_color mb-8">
+                  {t("sub_title")}
+                </p>
 
                 <form onSubmit={handleSubmit}>
                   <div className="mb-6">
@@ -127,9 +131,8 @@ const ContactForm = ({ fromHome }) => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder={t("full_name")}
-                      className={`w-full px-4 py-3 rounded-full border ${
-                        errors.name ? "border-red-500" : "border-gray-300"
-                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                      className={`w-full px-4 py-3 rounded-full border ${errors.name ? "border-red-500" : "border-gray-300"
+                        } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                     />
                     {errors.name && (
                       <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -143,9 +146,8 @@ const ContactForm = ({ fromHome }) => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder={t("email")}
-                      className={`w-full px-4 py-3 rounded-full border ${
-                        errors.email ? "border-red-500" : "border-gray-300"
-                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                      className={`w-full px-4 py-3 rounded-full border ${errors.email ? "border-red-500" : "border-gray-300"
+                        } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm mt-1">
@@ -161,9 +163,8 @@ const ContactForm = ({ fromHome }) => {
                       onChange={handleChange}
                       placeholder={t("message")}
                       rows={6}
-                      className={`w-full px-4 py-3 rounded-3xl border ${
-                        errors.message ? "border-red-500" : "border-gray-300"
-                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                      className={`w-full px-4 py-3 rounded-3xl border ${errors.message ? "border-red-500" : "border-gray-300"
+                        } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                     ></textarea>
                     {errors.message && (
                       <p className="text-red-500 text-sm mt-1">
@@ -264,9 +265,8 @@ const ContactForm = ({ fromHome }) => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder={t("full_name")}
-                      className={`w-full px-4 py-3 rounded-full border ${
-                        errors.name ? "border-red-500" : "border-gray-300"
-                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                      className={`w-full px-4 py-3 rounded-full border ${errors.name ? "border-red-500" : "border-gray-300"
+                        } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                     />
                     {errors.name && (
                       <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -280,9 +280,8 @@ const ContactForm = ({ fromHome }) => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder={t("email")}
-                      className={`w-full px-4 py-3 rounded-full border ${
-                        errors.email ? "border-red-500" : "border-gray-300"
-                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                      className={`w-full px-4 py-3 rounded-full border ${errors.email ? "border-red-500" : "border-gray-300"
+                        } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm mt-1">
@@ -299,9 +298,8 @@ const ContactForm = ({ fromHome }) => {
                     onChange={handleChange}
                     placeholder={t("message")}
                     rows={6}
-                    className={`w-full px-4 py-3 rounded-3xl border ${
-                      errors.message ? "border-red-500" : "border-gray-300"
-                    } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
+                    className={`w-full px-4 py-3 rounded-3xl border ${errors.message ? "border-red-500" : "border-gray-300"
+                      } focus:outline-none focus:ring-2 focus:ring-intertext-interactive_color`}
                   ></textarea>
                   {errors.message && (
                     <p className="text-red-500 text-sm mt-1">

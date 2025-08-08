@@ -17,6 +17,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { formatCurrency } from "@/utils/helper";
+import { IoMdClose } from "react-icons/io";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -204,7 +205,17 @@ const BookingModal: FC<BookingModalProps> = ({
 
   return (
     <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="bg-white max-w-3xl rounded-xl shadow-2xl w-md-[90%] max-h-[80vh] overflow-y-auto p-0">
+      <div className="">
+      {/* Close Button Outside Modal */}
+      {/* {
+        isOpen && (
+          // <button  className="absolute -top-34 -right-4 z-50 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-100">
+          <button className="fixed top-24 right-28 z-[9999] bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-100">
+            <IoMdClose size={20} />
+          </button>
+        )
+      } */}
+      <AlertDialogContent className=" bg-white max-w-3xl rounded-xl shadow-2xl w-[90%] max-h-[80vh] overflow-y-auto p-0">
         <AlertDialogHeader className="p-6 bg-interactive_color text-white hover:bg-active_color rounded-t-xl">
           <AlertDialogTitle className="text-2xl font-bold text-center">
             {t("title")}
@@ -236,12 +247,13 @@ const BookingModal: FC<BookingModalProps> = ({
             <div>
               {navigationStack.length > 0 && (
                 <button
-                  onClick={() => { handleBack();
+                  onClick={() => {
+                    handleBack();
                   }}
                   className="text-sm mx-2 text-[var(--interactive-color)] underline hover:text-[var(--active-color)] transition-colors"
                 >
                   {t("back")}
-                </button> 
+                </button>
               )}
 
               {navigationStack.length <= 0 && (
@@ -281,6 +293,7 @@ const BookingModal: FC<BookingModalProps> = ({
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
+      </div>
     </AlertDialog>
   );
 };

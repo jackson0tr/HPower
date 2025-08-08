@@ -277,6 +277,7 @@
     },
     "ContactForm": {
       "title": "Contact Us",
+      "sub_title": "Contact HPower today and let us assist you",
       "full_name": "Full Name",
       "email": "Email",
       "message": "Message",
@@ -847,5 +848,13 @@
       "password_reset_success": "Your password has been reset successfully!",
       "error_occurred": "Something went wrong. Please try again.",
       "back_to_login": "Back to login"
+    },
+    "Testimonials": {
+      "title": "See what our customers say about us",
+      "sub_title": "Join us today and enjoy a wide selection of home services all over UAE."
+    },
+    "Download":{
+      "title": "Download our app and Book today",
+      "sub_title": "H Power Mobile Apps are coming soon! A new creation is on its way to make your moments shine brighter. Are you ready?"
     }
   }

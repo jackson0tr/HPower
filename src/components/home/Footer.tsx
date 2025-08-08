@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <footer className="bg-[#f5f5f5] text-gray-500 py-4">
+      <footer className="bg-[#f5f5f5] text-gray-500 py-4 relative !z-50">
         <div className="w-full px-4 xl:px-48">
           <div className="flex flex-col items-center justify-center w-full lg:flex-row lg:justify-evenly gap-10">
             {/* Links Section */}
