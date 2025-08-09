@@ -41,7 +41,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       <QueryProvider>
         <NextIntlClientProvider messages={messages}>
           <body
-            className={`${isRTL ? "font-tajawal" : "font-roboto"} bg-gradient-to-r from-white via-[#fde9df] to-white`}
+            className={`${isRTL ? "font-tajawal" : "font-roboto"} bg-gradient-to-r from-white via-[#fde9df] to-white !overflow-x-hidden`}
             suppressHydrationWarning={true}
           >
             <Navbar />

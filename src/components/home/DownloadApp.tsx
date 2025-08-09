@@ -6,24 +6,24 @@ const DownloadAppSection = () => {
   const locale = useLocale();
   const t = useTranslations("Download");
   return (
-    <section className="container md:!h-[50vh] xxl:!h-[30vh] mx-auto px-4 py-10 md:py-0 flex flex-col md:flex-row items-center">
+    <section className="container md:!h-[55vh] xxl:!h-[35vh] mx-auto px-4 py-10 md:py-0 flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 meb-10 md:mb-0 md:pt-24 md:pr-10">
-        <h4 className="text-2xl md:text-3xl text-interactive_color font-bold mb-4">
+        <h4 className="text-mobile_header lg:text-header text-interactive_color font-bold">
           {t("title")}
         </h4>
 
-        <p className={`mb-4 text-interactive_color max-w-lg`}>
+        <p className={`text-interactive_color max-w-lg`}>
           {t("sub_title")}
         </p>
 
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 ">
           <a
             href="#"
           >
             <Image
               src="/images/download-from-app-store.png"
               alt="App Store"
-              width={150}
+              width={170}
               height={40}
             />
           </a>
@@ -34,7 +34,7 @@ const DownloadAppSection = () => {
             <Image
               src="/images/download-from-google-play.png"
               alt="Google Play"
-              width={150}
+              width={170}
               height={40}
             />
           </a>

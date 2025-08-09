@@ -119,7 +119,7 @@ const ContactForm = ({ fromHome }) => {
                   {t("title")}
                 </h2>
 
-                <p className="md:text-mobile_header text-xs  text-interactive_color mb-8">
+                <p className="md:etext-mobile_header texte-xs  text-interactive_color mb-8">
                   {t("sub_title")}
                 </p>
 
